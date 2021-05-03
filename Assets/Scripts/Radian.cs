@@ -18,7 +18,6 @@ public class Radian : MonoBehaviour
     }
     public void InstantiateCube() {
         float optimizedAngle = 360 / cubeCount;
-        Debug.Log(cubeCount);
         for (var i = 0; i < yCount; i++)
         {
             for (var z = 0; z <= cubeCount; z++)
@@ -35,6 +34,5 @@ public class Radian : MonoBehaviour
             ,cube.transform.position.y + cube.transform.localScale.y + 0.01f,
             cube.transform.position.z);
         }
-        Destroy(cube);
     }
 }

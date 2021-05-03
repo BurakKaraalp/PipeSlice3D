@@ -10,7 +10,7 @@ public class Ring : MonoBehaviour
 	public GameObject ring,cylinder,colTrigger;
 	public Vector3 offset;
 	Enviro enviro;
-	Vector3 defaultScale = new Vector3(2.40f,2.40f,1.63f);
+	Vector3 defaultScale = new Vector3(2.60f,2.60f,1.63f);
 	private void Start() {
 		ring = GameObject.FindGameObjectWithTag("Ring");
 		enviro = colTrigger.GetComponent<Enviro>();

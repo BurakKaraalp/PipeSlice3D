@@ -9,6 +9,10 @@ TagManager:
   - Cylinder
   - Destroy
   - RingScript
+  - EnemyCylinder
+  - EndPoint
+  - StartPoint
+  - GameAssets
   layers:
   - Default
   - TransparentFX
