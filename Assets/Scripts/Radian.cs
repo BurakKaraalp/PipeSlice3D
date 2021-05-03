@@ -34,5 +34,6 @@ public class Radian : MonoBehaviour
             ,cube.transform.position.y + cube.transform.localScale.y + 0.01f,
             cube.transform.position.z);
         }
+        Destroy(cube);
     }
 }

@@ -10,21 +10,25 @@ public class GameAssets : MonoBehaviour
     public GameObject[] sets;
     private void Awake() {
         RandomColor();
-        SetMeshColor();
         InstantiateSet();
     }
     void Update()
     {
         InstantiateSet_();
+        SetMeshColor();
     }
     public void SetMeshColor(){
         GameObject[] enemyCylinder = GameObject.FindGameObjectsWithTag("EnemyCylinder");
         foreach (GameObject item in enemyCylinder){
-            item.GetComponent<Renderer>().material.color = randomColor;
+            if(item.GetComponent<Renderer>().material.color != randomColor){
+                item.GetComponent<Renderer>().material.color = randomColor;
+            }
         }
         GameObject[] enviros = GameObject.FindGameObjectsWithTag("Enviro");
         foreach (GameObject item in enviros){
-            item.transform.GetComponentInChildren<Renderer>().material.color = randomColor;
+            if(item.transform.GetComponentInChildren<Renderer>().material.color != randomColor){
+                item.transform.GetComponentInChildren<Renderer>().material.color = randomColor;
+            }
         }
     }
     void RandomColor(){
@@ -40,13 +44,11 @@ public class GameAssets : MonoBehaviour
         GameObject[] endPoints = GameObject.FindGameObjectsWithTag("EndPoint");
         if(endPoints.Length <= 2){
              for(int i = 0; i < endPoints.Length;i++){
-                 Debug.Log(endPoints[i].transform.position.y );
                     if(endPoints[i].transform.position.y > yPoint){
                         yPoint = endPoints[i].transform.position.y; 
                 }
-                Instantiate(sets[Random.Range(0,sets.Length)],new Vector3(0,yPoint,0),Quaternion.identity);
-                yPoint = 0;
             }
+            Instantiate(sets[Random.Range(0,sets.Length)],new Vector3(0,yPoint,0),Quaternion.identity);
         }
     }
 }
