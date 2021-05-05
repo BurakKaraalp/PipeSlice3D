@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5083630595233374497}
   - component: {fileID: 5083630595233374496}
   - component: {fileID: 4839972751832078472}
+  - component: {fileID: 5899103141058092128}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Enviro
@@ -110,6 +111,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5899103141058092128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5083630595233374503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d438632ab1b72d429b47b4961234ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cube: {fileID: 0}
+  cylinder: {fileID: 0}
+  cubeCount: 0
+  angle: 0
+  yCount: 0
 --- !u!1 &5083630595828409903
 GameObject:
   m_ObjectHideFlags: 0

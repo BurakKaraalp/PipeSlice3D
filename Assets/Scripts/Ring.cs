@@ -17,11 +17,12 @@ public class Ring : MonoBehaviour
 	}
 	public void Update() {
 		RingClick();
+		CylinderCalculator();
 	}
 	public void RingClick(){
 		if(Input.touchCount > 0){
+			ring.GetComponent<Enviro>().setTouchTrigger(true);
 			cylinder = enviro.getTriggerObject();
-			ring.GetComponent<Enviro>().SetTouchTrigger(true);
 			if(cylinder.tag != "Ring" && ring.transform.localScale.y >= cylinder.transform.localScale.z){
 				ring.transform.localScale = Vector3.Lerp(ring.transform.localScale, new Vector3(cylinder.transform.localScale.x + offset.x,
 				cylinder.transform.localScale.z + offset.y,
@@ -29,9 +30,15 @@ public class Ring : MonoBehaviour
 			}	
 		}
 		if(Input.touchCount == 0){
+			ring.GetComponent<Enviro>().setTouchTrigger(false);
 			cylinder = enviro.getTriggerObject();
-			ring.GetComponent<Enviro>().SetTouchTrigger(false);
 			ring.transform.localScale = Vector3.Lerp(ring.transform.localScale,defaultScale,0.5f);
+		}
+	}
+	public void CylinderCalculator(){
+		if(enviro.getTriggerObject().gameObject.transform.localScale.x > ring.transform.localScale.x){
+			RingDestroy.instance.DestroyRing(ring.GetComponent<BoxCollider>());
+			Debug.Log("Enviro");
 		}
 	}
 }

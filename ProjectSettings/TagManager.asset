@@ -13,6 +13,7 @@ TagManager:
   - EndPoint
   - StartPoint
   - GameAssets
+  - ExternalDestroyer
   layers:
   - Default
   - TransparentFX

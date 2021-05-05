@@ -250,10 +250,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randomColor: {r: 0, g: 0, b: 0, a: 0}
-  spawnedSet: 0
-  sets:
-  - {fileID: 5419468698938296073, guid: 6f3b7db960d40d2418e570b52c1e2456, type: 3}
-  - {fileID: 9207073418477238782, guid: 30ce68bcba9c6de4aaaa67108380d712, type: 3}
+  enemyRandomColor: {r: 0, g: 0, b: 0, a: 0}
+  colors:
+  - {r: 0.8235294, g: 0.29803923, b: 0.29411766, a: 0}
+  - {r: 0.9764706, g: 0.627451, b: 0.7137255, a: 0}
+  - {r: 0.6901961, g: 0.33333334, b: 0.7764706, a: 0}
+  - {r: 0.21176471, g: 0.654902, b: 0.7647059, a: 0}
+  - {r: 0.8666667, g: 0.9372549, b: 0.6627451, a: 0}
+  - {r: 0.07450981, g: 0.61960787, b: 0.4117647, a: 0}
+  - {r: 0.68235296, g: 0.40784314, b: 0.4627451, a: 0}
+  - {r: 0.28627452, g: 0.5529412, b: 0.007843138, a: 0}
+  - {r: 0.3529412, g: 0.4, b: 0.9137255, a: 0}
+  - {r: 0.8039216, g: 0.7529412, b: 0.92156863, a: 0}
+  pipes:
+  - {fileID: 1957971869530288415, guid: 5cc32c235f1333c4593478768ab37e41, type: 3}
+  - {fileID: 6139461345291575819, guid: 33d3af09a5afc424c9f7ea1ddf3628aa, type: 3}
+  - {fileID: 5142569082757962225, guid: b79e7a572a2903b439d138ef2b2c06b3, type: 3}
+  enemyCylinder: {fileID: 1050489708363935348, guid: dd3fef11424a0dc428ae69e64f4b73ea,
+    type: 3}
+  selectedEnviro: {fileID: 5083630595828409903, guid: b66233428161c674091b2468ff754635,
+    type: 3}
 --- !u!1 &401412754
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,8 +704,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0000005, y: 1.0000004, z: 0.31169915}
-  m_Center: {x: -0.00000013873726, y: 0.0000000028823754, z: -0.043691836}
+  m_Size: {x: 1.0000005, y: 1.0000004, z: 0.27986342}
+  m_Center: {x: -0.00000012918005, y: 0.0000000016922663, z: -0.027773894}
 --- !u!54 &1074759203
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -721,6 +737,20 @@ MonoBehaviour:
   triggerObject: {fileID: 0}
   particle: {fileID: 0}
   touchTrigger: 0
+--- !u!114 &1074759205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074759199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6826d37d891444d8a96d159c1dbb58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particle: {fileID: 2223177833813169420, guid: 7246f6ff71c62104c97659e658e3c118,
+    type: 3}
 --- !u!1 &1228434991
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,12 +888,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c5f7af2b6b7746f4ab5019537ef9aeca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3181036
+      value: -1.97
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c5f7af2b6b7746f4ab5019537ef9aeca,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.00525
+      value: 18.84
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c5f7af2b6b7746f4ab5019537ef9aeca,
         type: 3}
